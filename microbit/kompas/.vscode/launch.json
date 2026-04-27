@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Microbit",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "external",
+            "gdbTarget": "localhost:1337",
+            "executable": "${workspaceRoot}/target/thumbv7em-none-eabihf/debug/hello",
+            "cwd": "${workspaceRoot}",
+            "projectRoot": "${workspaceRoot}",
+            "cpu": "cortex-m4",
+            "preLaunchCommands": [
+                "monitor reset halt"
+            ]
+        }
+    ]
+}

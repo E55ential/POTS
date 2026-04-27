@@ -1,0 +1,8 @@
+[target.thumbv7em-none-eabihf]
+# Добавляем флаги для компоновщика
+rustflags = [
+  "-C", "link-arg=-Tlink.x",
+]
+
+[build]
+target = "thumbv7em-none-eabihf"

@@ -1,0 +1,9 @@
+[package]
+name = "microbit-hello"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+microbit-v2 = "0.16.0"
+cortex-m-rt = "0.7"
+panic-halt = "1.0.0"
