@@ -71,7 +71,7 @@ fn visit_page(
 fn main() {
     let client = Client::new();
     // Задайте начальный URL (можно изменить на любой другой)
-    let start_url = Url::parse("httpbin.org/links/3/1").unwrap();
+    let start_url = Url::parse("https://ernestovich.ru/").unwrap();
     let base_domain = start_url.host_str().expect("Не удалось определить домен");
 
     let mut visited = HashSet::new();

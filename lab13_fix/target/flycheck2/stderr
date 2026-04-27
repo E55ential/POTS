@@ -1,5 +1,5 @@
-   0.024116010s  INFO prepare_target{force=false package_id=lab13_fix v0.1.0 (/home/sergey/POTS/lab13_fix) target="lab13_fix"}: cargo::core::compiler::fingerprint: fingerprint error for lab13_fix v0.1.0 (/home/sergey/POTS/lab13_fix)/Check { test: false }/TargetInner { name: "lab13_fix", doc: true, ..: with_path("/home/sergey/POTS/lab13_fix/src/main.rs", Edition2024) }
-   0.024153086s  INFO prepare_target{force=false package_id=lab13_fix v0.1.0 (/home/sergey/POTS/lab13_fix) target="lab13_fix"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/sergey/POTS/lab13_fix/target/debug/.fingerprint/lab13_fix-6201285bb4f5e55f/bin-lab13_fix`
+   0.026853423s  INFO prepare_target{force=false package_id=lab13_fix v0.1.0 (/home/sergey/POTS/lab13_fix) target="lab13_fix"}: cargo::core::compiler::fingerprint: fingerprint error for lab13_fix v0.1.0 (/home/sergey/POTS/lab13_fix)/Check { test: false }/TargetInner { name: "lab13_fix", doc: true, ..: with_path("/home/sergey/POTS/lab13_fix/src/main.rs", Edition2024) }
+   0.026908643s  INFO prepare_target{force=false package_id=lab13_fix v0.1.0 (/home/sergey/POTS/lab13_fix) target="lab13_fix"}: cargo::core::compiler::fingerprint:     err: failed to read `/home/sergey/POTS/lab13_fix/target/debug/.fingerprint/lab13_fix-6201285bb4f5e55f/bin-lab13_fix`
 
 Caused by:
     No such file or directory (os error 2)
