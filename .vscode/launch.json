@@ -1,20 +1,16 @@
 {
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug Microbit",
-            "type": "cortex-debug",
+            "name": "Launch",
+            "type": "lldb",
             "request": "launch",
-            "servertype": "external",
-            "gdbTarget": "localhost:1337",
-            "gdbPath": "gdb-multiarch",
-            "executable": "/home/sergey/POTS/microbit/kompas/target/thumbv7em-none-eabihf/debug/microbit_compass",
-            "cwd": "/home/sergey/POTS/microbit/kompas/",
-            "projectRoot": "/home/sergey/POTS/microbit/kompas/",
-            "cpu": "cortex-m4",
-            "preLaunchCommands": [
-                "monitor reset halt"
-            ]
+            "program": "${workspaceRoot}/<your program>",
+            "args": [],
+            "cwd": "${workspaceRoot}"
         }
     ]
 }

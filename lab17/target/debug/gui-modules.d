@@ -1,1 +1,0 @@
-/home/sergey/POTS/lab17/target/debug/gui-modules: /home/sergey/POTS/lab17/src/main.rs /home/sergey/POTS/lab17/src/widgets/button.rs /home/sergey/POTS/lab17/src/widgets/label.rs /home/sergey/POTS/lab17/src/widgets/window.rs /home/sergey/POTS/lab17/src/widgets.rs
