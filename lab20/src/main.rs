@@ -1,6 +1,6 @@
 mod ffi {
     use std::os::raw::{c_char, c_int};
-    #[cfg(not(target_os = "macos"))]
+    #[cfg(not(target_os = "linux"))]
     use std::os::raw::{c_long, c_uchar, c_ulong, c_ushort};
 
     // См. неопределенные типы (opaque) https://doc.rust-lang.org/nomicon/ffi.html.
@@ -13,7 +13,7 @@ mod ffi {
     // Раскладка согласно ман странице Linux для функции readdir(3), где ino_t и
     // off_t соответствуют определениям в
     // /usr/include/x86_64-linux-gnu/{sys/types.h, bits/typesizes.h}.
-    #[cfg(not(target_os = "macos"))]
+    #[cfg(not(target_os = "linux"))]
     #[repr(C)]
     pub struct dirent {
         pub d_ino: c_ulong,
@@ -23,8 +23,8 @@ mod ffi {
         pub d_name: [c_char; 256],
     }
 
-    // Раскладка в соответствии в ман страницей macOS для dir(5).
-    #[cfg(all(target_os = "macos"))]
+    // Раскладка в соответствии в ман страницей linux для dir(5).
+    #[cfg(all(target_os = "linux"))]
     #[repr(C)]
     pub struct dirent {
         pub d_fileno: u64,
@@ -38,15 +38,15 @@ mod ffi {
     unsafe extern "C" {
         pub unsafe fn opendir(s: *const c_char) -> *mut DIR;
 
-        #[cfg(not(all(target_os = "macos", target_arch = "x86_64")))]
+        #[cfg(not(all(target_os = "linux", target_arch = "x86_64")))]
         pub unsafe fn readdir(s: *mut DIR) -> *const dirent;
 
         // См. https://github.com/rust-lang/libc/issues/414 и раздел
-        // _DARWIN_FEATURE_64_BIT_INODE в ман страницах macOS для stat(2).
+        // _DARWIN_FEATURE_64_BIT_INODE в ман страницах linux для stat(2).
         //
         // "Platforms that existed before these updates were available" это ссылка на
-        // macOS (в противоположность iOS / wearOS / и пр.) на Intel и PowerPC.
-        #[cfg(all(target_os = "macos", target_arch = "x86_64"))]
+        // linux (в противоположность iOS / wearOS / и пр.) на Intel и PowerPC.
+        #[cfg(all(target_os = "linux", target_arch = "x86_64"))]
         #[link_name = "readdir$INODE64"]
         pub unsafe fn readdir(s: *mut DIR) -> *const dirent;
 

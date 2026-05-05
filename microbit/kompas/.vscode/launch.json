@@ -7,9 +7,10 @@
             "request": "launch",
             "servertype": "external",
             "gdbTarget": "localhost:1337",
-            "executable": "${workspaceRoot}/target/thumbv7em-none-eabihf/debug/hello",
-            "cwd": "${workspaceRoot}",
-            "projectRoot": "${workspaceRoot}",
+            "gdbPath": "gdb-multiarch",
+            "executable": "/home/sergey/POTS/microbit/kompas/target/thumbv7em-none-eabihf/debug/microbit_compass",
+            "cwd": "/home/sergey/POTS/microbit/kompas/",
+            "projectRoot": "/home/sergey/POTS/microbit/kompas/",
             "cpu": "cortex-m4",
             "preLaunchCommands": [
                 "monitor reset halt"

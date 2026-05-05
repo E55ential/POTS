@@ -140,6 +140,7 @@ fn main() -> ! {
     let _ = writeln!(uart, "LSM303AGR compass started\r\n");
 
     let mut heading = 0i32;
+    writeln!(uart, "Hello World!").unwrap();
 
     loop {
     // Временно убираем проверку xyz_new_data()
